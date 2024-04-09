@@ -68,8 +68,8 @@ def rag(query, index):
     print('RAG Done')
     return response
 
-def combine_text(meta_prompt, user_prompt, result):
-    chunk = f"meta_prompt: {meta_prompt}\nprompt: {user_prompt}\nresult: {result}"
+def combine_text(user_prompt, likes, dislikes):
+    chunk = f"User Prompt: {user_prompt}\n Below are the user feeback from previous interactions. consider these comments to generate the content as per the users liking\n Likes: {likes}\n Dislikes: \n {dislikes}"
     print('combine Done')
     return chunk
 
